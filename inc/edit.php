@@ -2,9 +2,9 @@
 include("config.php");
 
 $id = $_POST["floatingId"];
-$updateprenom = $_POST["floatingEditSurname"];
-$updatenom = $_POST["floatingEditName"];
-$updateemail = $_POST["floatingEditEmail"];
+$updateprenom = htmlentities($_POST["floatingEditSurname"]);
+$updatenom = htmlentities($_POST["floatingEditName"]);
+$updateemail = htmlentities($_POST["floatingEditEmail"]);
 
 if(empty($updatenom)) {
     header('location: ../index.php');

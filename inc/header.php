@@ -15,9 +15,9 @@
 if(!empty($_POST)) {
 $nberror = 0;
 
-$prenom = $_POST["floatingSurname"];
-$nom = $_POST["floatingName"];
-$email = $_POST["floatingEmail"];
+$prenom = htmlentities($_POST["floatingSurname"]);
+$nom = htmlentities($_POST["floatingName"]);
+$email = htmlentities($_POST["floatingEmail"]);
 
 if(empty($nom)) {
     $error["Nom"][] = "Veuillez indiquer votre nom";
